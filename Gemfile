@@ -39,4 +39,14 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+gem 'graphql', '~> 2.2', '>= 2.2.5'
+group :development do
+  gem 'graphiql-rails'
+  gem 'pry-rails'
+end
+
+gem "graphql-batch"
+
+
 gem 'blorgh', path: 'engines/blorgh'

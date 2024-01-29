@@ -39,5 +39,7 @@ module Myapp
 
     config.middleware.use ActionDispatch::Flash
     config.middleware.use Rack::MethodOverride
+
+    config.autoload_paths += Dir.glob("#{config.root}/app/queries/**/")
   end
 end
