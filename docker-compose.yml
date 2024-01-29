@@ -31,6 +31,8 @@ services:
     environment:
       RAILS_ENV: development
     container_name: myapp_app
+    stdin_open: true
+    tty: true
 
 volumes:
   db-store:

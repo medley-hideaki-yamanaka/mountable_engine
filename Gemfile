@@ -44,6 +44,7 @@ gem 'graphql', '~> 2.2', '>= 2.2.5'
 group :development do
   gem 'graphiql-rails'
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 gem "graphql-batch"

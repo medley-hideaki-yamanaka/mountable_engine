@@ -65,4 +65,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.assets.compile = true
+
+  config.logger = Logger.new(STDOUT)
 end

@@ -7,7 +7,7 @@ module Blorgh
 
     # GET /articles
     def index
-      @articles = ::AllArticlesQuery.new.call
+      @articles = AllArticlesQuery.new.call
       render json: @articles, status: :ok
     end
 
