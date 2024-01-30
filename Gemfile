@@ -51,3 +51,4 @@ gem "graphql-batch"
 
 
 gem 'blorgh', path: 'engines/blorgh'
+gem 'admin', path: 'engines/admin'

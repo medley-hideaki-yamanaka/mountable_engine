@@ -29,5 +29,6 @@ module Types
     end
 
     field :articles, resolver: Resolvers::ArticlesResolver
+    field :users, resolver: Admin::Resolvers::UsersResolver
   end
 end
