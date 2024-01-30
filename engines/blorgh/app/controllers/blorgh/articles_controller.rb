@@ -1,14 +1,27 @@
 require_dependency "blorgh/application_controller"
+require './engines/admin/app/public/admin/user_server'
 
 module Blorgh
   class ArticlesController < ApplicationController
     protect_from_forgery
     before_action :set_article, only: [:show, :edit, :update, :destroy]
 
+    def all
+      @articles = AllArticlesQuery.new.call
+      render json: @articles, status: :ok
+    end
+
+    def user_articles
+      id = params[:id]
+      server = Admin::UserServer.new
+      request = Admin::UserRequest.new(id: id.to_i)
+      response = server.get_user(request)
+      render json: response, status: :ok
+    end
+
     # GET /articles
     def index
       @articles = AllArticlesQuery.new.call
-      render json: @articles, status: :ok
     end
 
     # GET /articles/1

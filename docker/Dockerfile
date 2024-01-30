@@ -1,4 +1,7 @@
-FROM ruby:3.1
+FROM ruby:3.2.0
+
+RUN apt-get update \
+    && apt-get install -y ruby-grpc-tools
 
 RUN mkdir /myapp
 WORKDIR /myapp
@@ -8,9 +11,9 @@ COPY Gemfile.lock /myapp/Gemfile.lock
 RUN gem update --system
 RUN bundle update --bundler
 
-RUN bundle config set path vendor/bundle \
+RUN bundle config set path /myapp/vendor/bundle \
     && bundle install
-COPY . /myapp
+COPY ../ /myapp
 
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh

@@ -7,7 +7,7 @@ module Resolvers
     type [Types::ArticleType], null: false
 
     def resolve
-      uri = URI.parse("http://localhost:3000/blorgh/articles")
+      uri = URI.parse("http://localhost:3000/blorgh/all_articles")
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = uri.scheme === "https"
       headers = { "Content-Type" => "application/json" }
