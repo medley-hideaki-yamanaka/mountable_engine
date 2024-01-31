@@ -9,6 +9,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "UserResponse" do
       optional :name, :string, 1
+      optional :book_title, :string, 2
     end
   end
 end

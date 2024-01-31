@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Book {
+  rpc GetBook(BookRequest) returns (BookResponse) {}
+}
+
+message BookRequest {
+  int32 id = 1;
+}
+
+message BookResponse {
+  string title = 1;
+}

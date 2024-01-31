@@ -10,4 +10,5 @@ message UserRequest {
 
 message UserResponse {
     string name = 1;
+    string book_title = 2;
 }
