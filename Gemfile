@@ -54,3 +54,8 @@ gem 'grpc-tools'
 
 gem 'admin', path: 'engines/admin'
 gem 'blog', path: 'engines/blog'
+
+gem 'packwerk'
+gem 'packs-rails'
+
+gem 'book', path: 'engines/book'

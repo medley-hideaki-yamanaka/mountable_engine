@@ -5,7 +5,6 @@
 /tmp/
 .byebug_history
 
-vendor/bundle
-
 package_todo.yml
 
+vendor/bundle
