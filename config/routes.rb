@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
   mount Blorgh::Engine => "/blorgh"
   mount Admin::Engine => "/admin"
+  mount Blog::Engine => "/blog"
 end

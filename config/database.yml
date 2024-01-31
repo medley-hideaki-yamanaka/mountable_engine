@@ -22,12 +22,12 @@ development:
     <<: *default
     database: myapp
 
-  blorgh:
+  blog:
     <<: *default
-    username: root_blorgh
-    password: password_blorgh
-    database: blorgh
-    migrations_paths: engines/blorgh/db/migrate
+    username: root_blog
+    password: password_blog
+    database: blog
+    migrations_paths: engines/blog/db/migrate
 
   admin:
     <<: *default
