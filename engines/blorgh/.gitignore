@@ -1,8 +1,0 @@
-/.bundle/
-/doc/
-/log/*.log
-/pkg/
-/tmp/
-/test/dummy/
-.byebug_history
-vendor/bundle

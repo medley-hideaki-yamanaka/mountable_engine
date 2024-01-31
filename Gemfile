@@ -52,6 +52,5 @@ gem "graphql-batch"
 gem 'grpc'
 gem 'grpc-tools'
 
-gem 'blorgh', path: 'engines/blorgh'
 gem 'admin', path: 'engines/admin'
 gem 'blog', path: 'engines/blog'
