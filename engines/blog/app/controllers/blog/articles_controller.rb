@@ -15,9 +15,11 @@ module Blog
     # GET /user_articles/:id
     def user_articles
       id = params[:id]
+      # 他のエンジンのメソッドを呼び出す
       server = Admin::UserServer.new
       request = Admin::UserRequest.new(id: id.to_i)
       response = server.get_user(request)
+
       render json: response, status: :ok
     end
 

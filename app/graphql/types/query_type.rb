@@ -21,15 +21,9 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
-    end
-
     # 親アプリにリゾルバを用意している
     field :articles, resolver: Resolvers::ArticlesResolver
+    field :book, resolver: Resolvers::BooksResolver
     # 他のエンジンのリゾルバを呼び出す
     field :users, resolver: Admin::Resolvers::UsersResolver
   end
