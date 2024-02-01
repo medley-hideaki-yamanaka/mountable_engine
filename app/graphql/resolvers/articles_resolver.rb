@@ -7,6 +7,9 @@ module Resolvers
     type [Types::ArticleType], null: false
 
     def resolve
+      # 他エンジンのAPIを呼び出す
+      # これはpackwerkの対象外
+      # ※HTTP通信はpackwerkの対象外
       uri = URI.parse("http://localhost:3000/blog/all_articles")
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = uri.scheme === "https"

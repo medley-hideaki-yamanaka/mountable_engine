@@ -28,7 +28,9 @@ module Types
       "Hello World!"
     end
 
+    # 親アプリにリゾルバを用意している
     field :articles, resolver: Resolvers::ArticlesResolver
+    # 他のエンジンのリゾルバを呼び出す
     field :users, resolver: Admin::Resolvers::UsersResolver
   end
 end

@@ -7,6 +7,9 @@ module Book
 
     # GET /books
     def index
+      # 他のエンジンのモデルを参照できてしまう
+      user = Admin::User.find(1)
+
       @books = Book.all
     end
 
