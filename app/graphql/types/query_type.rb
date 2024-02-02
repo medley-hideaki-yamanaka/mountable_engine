@@ -24,6 +24,7 @@ module Types
     # 親アプリにリゾルバを用意している
     field :articles, resolver: Resolvers::ArticlesResolver
     field :book, resolver: Resolvers::BooksResolver
+    field :hoge, resolver: Resolvers::HogeResolver
     # 他のエンジンのリゾルバを呼び出す
     field :users, resolver: Admin::Resolvers::UsersResolver
   end

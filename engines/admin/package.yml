@@ -1,3 +1,8 @@
 enforce_dependencies: true
-dependencies:
-  - "."
+enforce_privacy: false
+#public_path: app/public/admin/
+metadata:
+  engine: true
+#dependencies:
+#  - "engines/book"
+enforce_folder_visibility: true

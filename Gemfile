@@ -59,3 +59,6 @@ gem 'packwerk'
 gem 'packs-rails'
 
 gem 'book', path: 'engines/book'
+
+gem 'packwerk-extensions'
+gem 'hoge', path: 'packs/hoge'
